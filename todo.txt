@@ -1,0 +1,5 @@
+Call differently so terminal title doesn't change
+Log to file
+
+Run in background with supervisor
+Run on start-up
