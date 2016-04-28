@@ -31,16 +31,18 @@ def connection_changed(connnection, last_connection, down_count):
             print('{} Internet is connected. Down count {}'.format(
                 datetime.now(), down_count))
         else:
-            print('{} Internet down. Down count {}'.format(
-                datetime.now(), down_count))
+            print('{} Internet down'.format(datetime.now()))
 
 
 def reconnect_to_network():
     """
-    You will need to run sudo ifconfig without needing to input a password for
-    this to work
+    You need to be able to run sudo ifconfig without needing to input a
+    password for this to work
     """
+    print('Restarting network connection')
     os.system('sudo ifconfig en0 down; sudo ifconfig en0 up')
+    # Allow time for reconnect
+    sleep(5)
 
 
 last_connection = None
