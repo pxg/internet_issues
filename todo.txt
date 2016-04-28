@@ -1,4 +1,7 @@
-Call differently so terminal title doesn't change
+Best way to call shell commands?
+Call restart without sudo
+---
+
 Log to file
 
 Run in background with supervisor
